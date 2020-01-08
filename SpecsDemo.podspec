@@ -14,9 +14,10 @@ Pod::Spec.new do |spec|
   #  can feel like a chore to fill in it's definitely to your advantage. The
   #  summary should be tweet-length, and the description more in depth.
   #
-
+  #版本号
   spec.name         = "SpecsDemo"
   spec.version      = "0.0.1"
+  #简介
   spec.summary      = "A short description of SpecsDemo."
 
   # This description is used to generate tags and improve search results.
@@ -25,9 +26,11 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+			SpecsDemo是私有仓库的一个demo
                    DESC
-
-  spec.homepage     = "http://EXAMPLE/SpecsDemo"
+  #项目主页地址
+spec.homepage     = "https://github.com/WBaoBao/SpecsDemo.git"
+  #spec.homepage     = "http://EXAMPLE/SpecsDemo"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -37,9 +40,9 @@ Pod::Spec.new do |spec|
   #  CocoaPods will detect a license file if there is a named LICENSE*
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
-
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+#许可证
+  #spec.license      = "MIT (example)"
+   spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -51,10 +54,11 @@ Pod::Spec.new do |spec|
   #  Specify a social_media_url where others can refer to, for example a twitter
   #  profile URL.
   #
-
+#作者
   spec.author             = { "WangBaoMing" => "1250829271@qq.com" }
   # Or just: spec.author    = "WangBaoMing"
   # spec.authors            = { "WangBaoMing" => "1250829271@qq.com" }
+#社交网址,这里我写的Twitter,如果你写Twitter的话,你的podspec发布成功后会@你
   # spec.social_media_url   = "https://twitter.com/WangBaoMing"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -67,6 +71,7 @@ Pod::Spec.new do |spec|
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
+ #支持的pod最低版本
   # spec.ios.deployment_target = "5.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
@@ -78,8 +83,17 @@ Pod::Spec.new do |spec|
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   #
+  #项目的地址"#{spec.version}"
+  spec.source       = { :git => "https://github.com/WBaoBao/SpecsDemo.git", :tag => spec.version }
+  #第一种是本地git仓库
+  #spec.source       = { :git => "./XTProtocomManager", :tag => s.version }
+  #spec.source = { :git => "https://github.com/dingpuyu/XTProtocolManager.git", :commit => "881daa" }
+  #spec.source = { :git => "https://github.com/dingpuyu/XTProtocolManager.git", :tag => 0.0.1 }
+  #spec.source = { :git => "https://github.com/dingpuyu/XTProtocolManager.git", :tag => spec.version }
+  #commit => "68defea" 表示将这个Pod版本与Git仓库中某个commit绑定
+  #tag => 1.0.0 表示将这个Pod版本与Git仓库中某个版本的comit绑定
+  #tag => s.version 表示将这个Pod版本与Git仓库中相同版本的comit绑定
 
-  spec.source       = { :git => "http://EXAMPLE/SpecsDemo.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,7 +103,7 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
+#需要包含的源文件
   spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   spec.exclude_files = "Classes/Exclude"
 
@@ -105,6 +119,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
+#资源文件
   # spec.resources = "Resources/*.png"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
@@ -117,7 +132,8 @@ Pod::Spec.new do |spec|
   #
 
   # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
+#所需的framework,多个用逗号隔开
+  # spec.frameworks = "SomeFramework", "AnotherFramework","UIKit"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
@@ -128,10 +144,11 @@ Pod::Spec.new do |spec|
   #  If your library depends on compiler flags you can set them in the xcconfig hash
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
-
+#是否支持ARC
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+#依赖库，不能依赖未发布的库
   # spec.dependency "JSONKit", "~> 1.4"
 
 end
