@@ -14,10 +14,10 @@ Pod::Spec.new do |spec|
   #  can feel like a chore to fill in it's definitely to your advantage. The
   #  summary should be tweet-length, and the description more in depth.
   #
-  #版本号
+  # 版本号
   spec.name         = "SpecsDemo"
   spec.version      = "0.0.1"
-  #简介
+  # 简介
   spec.summary      = "SpecsDemo 是私有specs的demo"
 
   # This description is used to generate tags and improve search results.
@@ -28,9 +28,9 @@ Pod::Spec.new do |spec|
   spec.description  = <<-DESC
 			SpecsDemo 是私有仓库的一个demo,用来实现组件化的探索
                    DESC
-  #项目主页地址
-  spec.homepage     = "https://github.com/WBaoBao/SpecsDemo.git"
-  #spec.homepage     = "http://EXAMPLE/SpecsDemo"
+  # 项目主页地址
+   spec.homepage     = "https://github.com/WBaoBao/SpecsDemo.git"
+  # spec.homepage     = "http://EXAMPLE/SpecsDemo"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -40,7 +40,7 @@ Pod::Spec.new do |spec|
   #  CocoaPods will detect a license file if there is a named LICENSE*
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
-#许可证
+  # 许可证
   #spec.license      = "MIT (example)"
    spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
@@ -54,11 +54,11 @@ Pod::Spec.new do |spec|
   #  Specify a social_media_url where others can refer to, for example a twitter
   #  profile URL.
   #
-#作者
+  # 作者
   spec.author             = { "WangBaoMing" => "1250829271@qq.com" }
   # Or just: spec.author    = "WangBaoMing"
   # spec.authors            = { "WangBaoMing" => "1250829271@qq.com" }
-#社交网址,这里我写的Twitter,如果你写Twitter的话,你的podspec发布成功后会@你
+  # 社交网址,这里我写的Twitter,如果你写Twitter的话,你的podspec发布成功后会@你
   # spec.social_media_url   = "https://twitter.com/WangBaoMing"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -71,7 +71,7 @@ Pod::Spec.new do |spec|
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
- #支持的pod最低版本
+  # 支持的pod最低版本
   # spec.ios.deployment_target = "5.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
@@ -83,16 +83,16 @@ Pod::Spec.new do |spec|
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   #
-  #项目的地址"#{spec.version}"
+  # 项目的地址"#{spec.version}"
   spec.source       = { :git => "https://github.com/WBaoBao/SpecsDemo.git", :tag => "#{spec.version}" }
-  #第一种是本地git仓库
-  #spec.source       = { :git => "./XTProtocomManager", :tag => s.version }
-  #spec.source = { :git => "https://github.com/dingpuyu/XTProtocolManager.git", :commit => "881daa" }
-  #spec.source = { :git => "https://github.com/dingpuyu/XTProtocolManager.git", :tag => 0.0.1 }
-  #spec.source = { :git => "https://github.com/dingpuyu/XTProtocolManager.git", :tag => spec.version }
-  #commit => "68defea" 表示将这个Pod版本与Git仓库中某个commit绑定
-  #tag => 1.0.0 表示将这个Pod版本与Git仓库中某个版本的comit绑定
-  #tag => s.version 表示将这个Pod版本与Git仓库中相同版本的comit绑定
+  # 第一种是本地git仓库
+  # spec.source       = { :git => "./XTProtocomManager", :tag => s.version }
+  # spec.source = { :git => "https://github.com/dingpuyu/XTProtocolManager.git", :commit => "881daa" }
+  # spec.source = { :git => "https://github.com/dingpuyu/XTProtocolManager.git", :tag => 0.0.1 }
+  # spec.source = { :git => "https://github.com/dingpuyu/XTProtocolManager.git", :tag => spec.version }
+  # commit => "68defea" 表示将这个Pod版本与Git仓库中某个commit绑定
+  # tag => 1.0.0 表示将这个Pod版本与Git仓库中某个版本的comit绑定
+  # tag => s.version 表示将这个Pod版本与Git仓库中相同版本的comit绑定
 
 
 
@@ -103,9 +103,9 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-  #需要包含的源文件"SpecsDemo/**/*.{h,m}"
+  # 需要包含的源文件"SpecsDemo/**/*.{h,m}"
   spec.source_files  = "SpecsDemo","SpecsDemo/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -119,7 +119,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-#资源文件
+  # 资源文件
   # spec.resources = "Resources/*.png"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
@@ -132,8 +132,8 @@ Pod::Spec.new do |spec|
   #
 
   # spec.framework  = "SomeFramework"
-#所需的framework,多个用逗号隔开
-  # spec.frameworks = "SomeFramework", "AnotherFramework","UIKit"
+  # 所需的framework,多个用逗号隔开
+   spec.frameworks = "UIKit","Foundation","QuartzCore"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
