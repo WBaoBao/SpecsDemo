@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
   spec.name         = "SpecsDemo"
   spec.version      = "0.0.1"
   #简介
-  spec.summary      = "A short description of SpecsDemo."
+  spec.summary      = "SpecsDemo 是私有specs的demo"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -26,10 +26,10 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-			SpecsDemo是私有仓库的一个demo
+			SpecsDemo 是私有仓库的一个demo,用来实现组件化的探索
                    DESC
   #项目主页地址
-spec.homepage     = "https://github.com/WBaoBao/SpecsDemo.git"
+  spec.homepage     = "https://github.com/WBaoBao/SpecsDemo.git"
   #spec.homepage     = "http://EXAMPLE/SpecsDemo"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
@@ -84,7 +84,7 @@ spec.homepage     = "https://github.com/WBaoBao/SpecsDemo.git"
   #  Supports git, hg, bzr, svn and HTTP.
   #
   #项目的地址"#{spec.version}"
-  spec.source       = { :git => "https://github.com/WBaoBao/SpecsDemo.git", :tag => spec.version }
+  spec.source       = { :git => "https://github.com/WBaoBao/SpecsDemo.git", :tag => "#{spec.version}" }
   #第一种是本地git仓库
   #spec.source       = { :git => "./XTProtocomManager", :tag => s.version }
   #spec.source = { :git => "https://github.com/dingpuyu/XTProtocolManager.git", :commit => "881daa" }
@@ -103,8 +103,8 @@ spec.homepage     = "https://github.com/WBaoBao/SpecsDemo.git"
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-#需要包含的源文件
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  #需要包含的源文件"SpecsDemo/**/*.{h,m}"
+  spec.source_files  = "SpecsDemo","SpecsDemo/*.{h,m}"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
